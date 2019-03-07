@@ -1,4 +1,5 @@
 import select
+import socket
 
 DATA = [b'*', b'*']
 
@@ -55,8 +56,24 @@ def read(reactor, sock):
         reactor.remove_reader(sock)
 
 
-def write(reactor, sock):
+def write(_, sock):
     sock.sendall(b''.join(DATA))
     print('client send', len(DATA), 'bytes')
     # double the amount of data to simulate real network application
     DATA.extend(DATA)
+
+
+def main():
+    listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    listener.bind(('127.0.0.1', 0))
+    listener.listen(1)
+    client = socket.create_connection(listener.getsockname())
+
+    loop = Reactor()
+    loop.add_writer(client, write)
+    loop.add_reader(listener, accept)
+    loop.run()
+
+
+if __name__ == '__main__':
+    main()
