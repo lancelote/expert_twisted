@@ -5,8 +5,8 @@ Python" book by Mark Williams and contributors
 
 ## TOC
 
-- [ ] Part 1: Foundation
-    - [ ] Chapter 1: An Introduction to Event-Driven Programming with Twisted
+- [ ] [Part 1: Foundation](part_01/)
+    - [ ] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](part_01/chapter_01/)
     - [ ] Chapter 2: An Introduction to Asynchronous Programming with Twisted
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
