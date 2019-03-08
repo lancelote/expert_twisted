@@ -7,6 +7,8 @@ DATA = [b'*', b'*']
 
 
 class BufferWrites(object):
+    """Transport."""
+
     def __init__(self, data_to_write, on_completion):
         self._buffer = data_to_write
         self._on_completion = on_completion
