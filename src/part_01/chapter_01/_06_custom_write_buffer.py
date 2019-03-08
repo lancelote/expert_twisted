@@ -1,7 +1,7 @@
 import errno
 import socket
 
-from part_01.chapter_01._04_event_loop_around_select import Reactor, accept
+from src.part_01 import Reactor, accept
 
 DATA = [b'*', b'*']
 
