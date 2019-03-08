@@ -7,6 +7,13 @@ Python" book by Mark Williams and contributors
 
 - [ ] [Part 1: Foundation](src/part_01/)
     - [ ] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01/)
+        - [Basic Event Driven Program](src/part_01/chapter_01/basic_event_drive_program.py)
+        - [Program with Multiple Events](src/part_01/chapter_01/program_with_multiple_events.py)
+        - [`select` and Sockets](src/part_01/chapter_01/select_and_sockets.py)
+        - [Event Loop around `select`](src/part_01/chapter_01/event_loop_around_select.py)
+        - [Non-blocking Socket](src/part_01/chapter_01/non_blocking_socket.py)
+        - [Custom Write Buffer](src/part_01/chapter_01/custom_write_buffer.py)
+        - [Reactor with Transport](src/part_01/chapter_01/reactor_with_transport.py)
     - [ ] Chapter 2: An Introduction to Asynchronous Programming with Twisted
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
