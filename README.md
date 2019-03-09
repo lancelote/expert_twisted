@@ -15,6 +15,7 @@ Python" book by Mark Williams and contributors
         - [Custom Write Buffer](src/part_01/chapter_01/custom_write_buffer.py)
         - [Reactor with Transport](src/part_01/chapter_01/reactor_with_transport.py)
         - [Bytes Transport](src/part_01/chapter_01/bytes_transport.py)
+        - [Event Driven Twisted Program](src/part_01/chapter_01/event_driven_twisted_program.py)
     - [ ] Chapter 2: An Introduction to Asynchronous Programming with Twisted
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
