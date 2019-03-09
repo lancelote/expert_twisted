@@ -3,3 +3,6 @@
 
 # Twister Trial cache
 _trial_temp/
+
+# Python byte code
+__pycache__/
