@@ -1,5 +1,5 @@
 # PyCharm settings
 .idea/
 
-# pytest cache
-.pytest_cache/
+# Twister Trial cache
+_trial_temp/
