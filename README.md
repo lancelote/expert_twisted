@@ -17,6 +17,7 @@ Python" book by Mark Williams and contributors
         - [Bytes Transport](src/part_01/chapter_01/bytes_transport.py)
         - [Event Driven Twisted Program](src/part_01/chapter_01/event_driven_twisted_program.py)
         - [Events in Time](src/part_01/chapter_01/events_in_time.py)
+        - [Repeated Events with Looping Call](src/part_01/chapter_01/repeated_events_with_looping_call.py)
     - [ ] Chapter 2: An Introduction to Asynchronous Programming with Twisted
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
