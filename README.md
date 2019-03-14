@@ -6,7 +6,7 @@ Python" book by Mark Williams and contributors
 ## TOC
 
 - [ ] [Part 1: Foundation](src/part_01/)
-    - [ ] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01/)
+    - [x] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01/)
         - [Basic Event Driven Program](src/part_01/chapter_01/basic_event_drive_program.py)
         - [Program with Multiple Events](src/part_01/chapter_01/program_with_multiple_events.py)
         - [`select` and Sockets](src/part_01/chapter_01/select_and_sockets.py)
