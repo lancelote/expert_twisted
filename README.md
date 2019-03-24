@@ -20,7 +20,8 @@ Python" book by Mark Williams and contributors
         - [Repeated Events with Looping Call](src/part_01/chapter_01/repeated_events_with_looping_call.py)
         - [Event Interfaces with `zope.interface`](src/part_01/chapter_01/event_interfaces_with_zope_interface.py)
         - [Flow Control with Producers and Consumers](src/part_01/chapter_01/flow_control_with_producers_and_consumers.py)
-    - [ ] Chapter 2: An Introduction to Asynchronous Programming with Twisted
+    - [ ] [Chapter 2: An Introduction to Asynchronous Programming with Twisted](src/part_01/chapter_02/)
+        - [Introduction to Twisted Deferred](src/part_01/chapter_02/introduction_to_deferred.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
