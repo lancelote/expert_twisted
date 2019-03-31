@@ -21,7 +21,10 @@ def return_inner_deferred(result, number):
     return inner_deferred
 
 
+# Callback loop inside outer_deferred will detect Deferred return type of the next callback pausing execution util
+# inner_deferred resolves to a value
 outer_deferred.addCallback(return_inner_deferred, '2')
+
 outer_deferred.addCallback(print_and_pass_through, '3')
 outer_deferred.addCallback(print_and_pass_through, '4')
 
