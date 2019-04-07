@@ -24,6 +24,7 @@ Python" book by Mark Williams and contributors
         - [Introduction to Twisted Deferred](src/part_01/chapter_02/introduction_to_deferred.py)
         - [Errbacks and Failures](src/part_01/chapter_02/errbacks_and_failures.py)
         - [Composing Deferreds](src/part_01/chapter_02/composing_deferreds.py)
+        - [Generator Throw](src/part_01/chapter_02/generator_throw.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
