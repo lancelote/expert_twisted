@@ -25,6 +25,7 @@ Python" book by Mark Williams and contributors
         - [Errbacks and Failures](src/part_01/chapter_02/errbacks_and_failures.py)
         - [Composing Deferreds](src/part_01/chapter_02/composing_deferreds.py)
         - [Generator Throw](src/part_01/chapter_02/generator_throw.py)
+        - [Coroutines with `yield from`](src/part_01/chapter_02/coroutines_with_yield_from.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
