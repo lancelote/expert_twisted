@@ -27,6 +27,7 @@ Python" book by Mark Williams and contributors
         - [Generator Throw](src/part_01/chapter_02/generator_throw.py)
         - [Coroutines with `yield from`](src/part_01/chapter_02/coroutines_with_yield_from.py)
         - [Coroutines Async and Await](src/part_01/chapter_02/coroutines_async_and_await.py)
+        - [Awaiting Deferreds](src/part_01/chapter_02/awaiting_deferreds.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
