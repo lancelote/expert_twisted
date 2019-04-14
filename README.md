@@ -29,6 +29,7 @@ Python" book by Mark Williams and contributors
         - [Coroutines Async and Await](src/part_01/chapter_02/coroutines_async_and_await.py)
         - [Awaiting Deferreds](src/part_01/chapter_02/awaiting_deferreds.py)
         - [Coroutines to Deferred with ensureDeferred](src/part_01/chapter_02/ensure_deferred.py)
+        - [Multiplexing Deferreds](src/part_01/chapter_02/multiplexing_deferreds.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
