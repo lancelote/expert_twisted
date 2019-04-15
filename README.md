@@ -30,6 +30,7 @@ Python" book by Mark Williams and contributors
         - [Awaiting Deferreds](src/part_01/chapter_02/awaiting_deferreds.py)
         - [Coroutines to Deferred with ensureDeferred](src/part_01/chapter_02/ensure_deferred.py)
         - [Multiplexing Deferreds](src/part_01/chapter_02/multiplexing_deferreds.py)
+        - [Testing Deferreds](src/part_01/chapter_02/testing_deferreds.py)
     - [ ] Chapter 3: Applications with treq and Klein
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
