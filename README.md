@@ -34,6 +34,8 @@ Python" book by Mark Williams and contributors
     - [ ] Chapter 3: Applications with treq and Klein
        - [Introducing `treq`](src/part_01/chapter_03/intro_treq.py)
        - [Introducing Klein](src/part_01/chapter_03/intro_klein.py)
+       - [Klein and Deferreds](src/part_01/chapter_03/klein_and_deferreds.py)
+       - [Instance-specific Klein Applications](src/part_01/chapter_03/instance_specific_klein.py)
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
     - [ ] Chapter 5: Using Twisted as a WSGI Server
