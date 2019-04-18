@@ -33,6 +33,7 @@ Python" book by Mark Williams and contributors
         - [Testing Deferreds](src/part_01/chapter_02/testing_deferreds.py)
     - [ ] Chapter 3: Applications with treq and Klein
        - [Introducing `treq`](src/part_01/chapter_03/intro_treq.py)
+       - [Introducing Klein](src/part_01/chapter_03/intro_klein.py)
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
     - [ ] Chapter 5: Using Twisted as a WSGI Server
