@@ -1,0 +1,2 @@
+class FeedAggregation(object):
+    pass

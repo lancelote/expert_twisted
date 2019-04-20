@@ -38,6 +38,7 @@ Python" book by Mark Williams and contributors
        - [Instance-specific Klein Applications](src/part_01/chapter_03/instance_specific_klein.py)
        - [Klein Templates with Planting](src/part_01/chapter_03/klein_templates_planting.py)
        - [First Feed Aggregation Draft](src/part_01/chapter_03/feed_aggregation_first_draft.py)
+       - [Feed Aggregation Project](src/part_01/chapter_03/feed_aggregation_project)
 - [ ] Part 2: Projects
     - [ ] Chapter 4: Twisted in Docker
     - [ ] Chapter 5: Using Twisted as a WSGI Server

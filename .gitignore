@@ -6,3 +6,9 @@ _trial_temp/
 
 # Python byte code
 __pycache__/
+
+# Editable project installations
+*.egg-info
+
+# Twisted plugin cache
+dropin.cache
