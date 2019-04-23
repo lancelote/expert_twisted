@@ -10,7 +10,7 @@ from treq.testing import StubTreq
 from twisted.internet import defer
 from twisted.trial.unittest import SynchronousTestCase
 
-from feed_aggregation import FeedAggregation
+from feed_aggregation import FeedAggregation, FeedRetrieval
 from feed_aggregation._service import Feed, Channel, Item
 
 FEEDS = (
@@ -67,7 +67,7 @@ class TestFeedRetrieval(SynchronousTestCase):
     def setUp(self):
         service = StubFeed({URL.from_text(feed._source).host.encode('ascii'): make_xml(feed) for feed in FEEDS})
         treq = StubTreq(service.resource())
-        self.retriever = FeedRetrieval(treq=treq)
+        self.retriever = FeedRetrieval(treq=treq)  # ToDo: debug "unhashable type StubFeed" error
 
     def test_retrieve(self):
         for feed in FEEDS:

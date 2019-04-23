@@ -1,3 +1,3 @@
-from feed_aggregation._service import FeedAggregation
+from feed_aggregation._service import FeedAggregation, FeedRetrieval
 
-__all__ = ['FeedAggregation']
+__all__ = ['FeedAggregation', 'FeedRetrieval']
