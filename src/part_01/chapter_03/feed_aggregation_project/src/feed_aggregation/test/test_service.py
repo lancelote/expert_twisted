@@ -67,7 +67,7 @@ class TestFeedRetrieval(SynchronousTestCase):
     def setUp(self):
         service = StubFeed({URL.from_text(feed._source).host.encode('ascii'): make_xml(feed) for feed in FEEDS})
         treq = StubTreq(service.resource())
-        self.retriever = FeedRetrieval(treq=treq)  # ToDo: debug "unhashable type StubFeed" error
+        self.retriever = FeedRetrieval(treq=treq)
 
     def test_retrieve(self):
         for feed in FEEDS:
