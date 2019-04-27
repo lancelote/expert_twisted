@@ -71,7 +71,7 @@ class TestFeedRetrieval(SynchronousTestCase):
         self.retriever = FeedRetrieval(treq=treq)
 
     def assertTag(self, tag, name, attributes, text):
-        self.assertEqual(tag.tag_name, name)
+        self.assertEqual(tag.tagName, name)
         self.assertEqual(tag.attributes, attributes)
         self.assertEqual(tag.children, [text])
 

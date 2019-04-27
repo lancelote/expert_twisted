@@ -1,8 +1,11 @@
+from functools import partial
+
 import attr
 import treq
 import feedparser
 from klein import Klein, Plating
 from twisted.web.template import tags as t, slot
+from twisted.logger import Logger
 
 
 @attr.s(frozen=True)
@@ -32,6 +35,22 @@ class Feed(object):
             [t.tr(t.td(t.a(href=item.link)(item.title)))
              for item in self._channel.items]
         )
+
+
+@attr.s(frozen=True)
+class FailedFeed(object):
+    _source = attr.ib()
+    _reason = attr.ib()
+
+    def as_json(self):
+        return {'error': 'Failed to load {}: {}'.format(self._source, self._reason)}
+
+    def as_html(self):
+        return t.a(href=self._source)('Failed to load feed: {}'.format(self._reason))
+
+
+class ResponseNotOk(Exception):
+    """A response returned a non-200 status code."""
 
 
 @attr.s
@@ -64,17 +83,41 @@ class FeedAggregation(object):
 @attr.s
 class FeedRetrieval(object):
     _treq = attr.ib()
+    _logger = Logger()
 
     def retrieve(self, url):
+        self._logger.info('Downloading feed {url}', url=url)
         feed_deferred = self._treq.get(url)
+
+        def check_code(response):
+            if response.code != 200:
+                raise ResponseNotOk(response.code)
+            return response
+
+        feed_deferred.addCallback(check_code)
         feed_deferred.addCallback(treq.content)
         feed_deferred.addCallback(feedparser.parse)
 
         def to_feed(parsed):
+            if parsed[u'bozo']:
+                raise parsed[u'bozo_exception']
             feed = parsed[u'feed']
             entries = parsed[u'entries']
             channel = Channel(feed[u'title'], feed[u'link'], tuple(Item(e[u'title'], e[u'link']) for e in entries))
             return Feed(url, channel)
 
         feed_deferred.addCallback(to_feed)
+
+        def failed_feed_when_not_ok(reason):
+            reason.trap(ResponseNotOk)
+            self._logger.error('Could not download feed {url}: {code}', url=url, code=str(reason.value))
+            return FailedFeed(url, str(reason.value))
+
+        def failed_feed_on_unknown(failure):
+            self._logger.failure('Unexpected {failure} downloading {url}', failure=failure, url=url)
+            return FailedFeed(url, repr(failure.value))
+
+        feed_deferred.addErrback(failed_feed_when_not_ok)
+        feed_deferred.addErrback(failed_feed_on_unknown)
+
         return feed_deferred
