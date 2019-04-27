@@ -1,4 +1,5 @@
 import json
+from xml.sax import SAXParseException
 
 import attr
 from hyperlink import URL
@@ -11,7 +12,7 @@ from twisted.internet import defer
 from twisted.trial.unittest import SynchronousTestCase
 
 from feed_aggregation import FeedAggregation, FeedRetrieval
-from feed_aggregation._service import Feed, Channel, Item
+from feed_aggregation._service import Feed, Channel, Item, ResponseNotOk
 
 FEEDS = (
     Feed(
@@ -68,6 +69,29 @@ class TestFeedRetrieval(SynchronousTestCase):
         service = StubFeed({URL.from_text(feed._source).host.encode('ascii'): make_xml(feed) for feed in FEEDS})
         treq = StubTreq(service.resource())
         self.retriever = FeedRetrieval(treq=treq)
+
+    def assertTag(self, tag, name, attributes, text):
+        self.assertEqual(tag.tag_name, name)
+        self.assertEqual(tag.attributes, attributes)
+        self.assertEqual(tag.children, [text])
+
+    def test_response_not_ok(self):
+        no_feed = StubFeed({})
+        retriever = FeedRetrieval(StubTreq(no_feed.resource()))
+        failed_feed = self.successResultOf(retriever.retrieve('http://missing.invalid/rss.xml'))
+        self.assertEqual(failed_feed.as_json(), {'error': 'Failed to load http://missing.invalid/rss.xml: 404'})
+        self.assertTag(failed_feed.as_html(), 'a', {'href': 'http://missing.invalid/rss.xml'},
+                       'Failed to load feed: 404')
+
+    def test_unexpected_failure(self):
+        empty = StubFeed({b'empty.invalid': b''})
+        retriever = FeedRetrieval(StubTreq(empty.resource()))
+        failed_feed = self.successResultOf(retriever.retrieve('http://empty.invalid/rss.xml'))
+        msg = "SAXParseException('no element found')"
+        self.assertEqual(failed_feed.as_json(), {'error': 'Failed to load http://empty.invalid/rss.xml: ' + msg})
+        self.assertTag(failed_feed.as_html(), 'a', {'href': 'http://empty.invalid/rss.xml'},
+                       'Failed to load feed: ' + msg)
+        self.assertTrue(self.flushLoggedErrors(SAXParseException))
 
     def test_retrieve(self):
         for feed in FEEDS:
