@@ -101,7 +101,11 @@ class TestFeedRetrieval(SynchronousTestCase):
 
 class TestFeedAggregation(SynchronousTestCase):
     def setUp(self):
-        self.client = StubTreq(FeedAggregation(FEEDS).resource())
+        service = StubFeed({URL.from_text(feed._source).host.encode('ascii'): make_xml(feed) for feed in FEEDS})
+        treq = StubTreq(service.resource())
+        urls = [feed._source for feed in FEEDS]
+        retriever = FeedRetrieval(treq)
+        self.client = StubTreq(FeedAggregation(retriever.retrieve, urls).resource())
 
     @defer.inlineCallbacks
     def get(self, url):

@@ -55,7 +55,8 @@ class ResponseNotOk(Exception):
 
 @attr.s
 class FeedAggregation(object):
-    _feeds = attr.ib()
+    _retrieve = attr.ib()
+    _urls = attr.ib()
     _app = Klein()
     _planting = Plating(
         tags=t.html(
@@ -72,12 +73,9 @@ class FeedAggregation(object):
         t.div(render='feeds:list')(slot('item')),
     )
     def root(self, request):
-        json_requested = request.args.get(b'json')
-
         def convert(feed):
-            return feed.as_json() if json_requested else feed.as_html()
-
-        return {'feeds': [convert(feed) for feed in self._feeds]}
+            return feed.as_json() if request.args.get(b'json') else feed.as_html()
+        return {'feeds': [self._retrieve(url).addCallback(convert) for url in self._urls]}
 
 
 @attr.s
