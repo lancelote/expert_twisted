@@ -10,3 +10,4 @@ git+git://github.com/twisted/klein.git
 lxml==4.3.3
 attrs==19.1.0
 hyperlink==18.0.0
+zope.interface==4.6.0
