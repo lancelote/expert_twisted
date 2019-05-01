@@ -5,7 +5,7 @@ Python" book by Mark Williams and contributors
 
 ## TOC
 
-- [ ] [Part 1: Foundation](src/part_01/)
+- [x] [Part 1: Foundation](src/part_01/)
     - [x] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01/)
         - [Basic Event Driven Program](src/part_01/chapter_01/basic_event_driven_program.py)
         - [Program with Multiple Events](src/part_01/chapter_01/program_with_multiple_events.py)
@@ -31,7 +31,7 @@ Python" book by Mark Williams and contributors
         - [Coroutines to Deferred with ensureDeferred](src/part_01/chapter_02/ensure_deferred.py)
         - [Multiplexing Deferreds](src/part_01/chapter_02/multiplexing_deferreds.py)
         - [Testing Deferreds](src/part_01/chapter_02/testing_deferreds.py)
-    - [ ] Chapter 3: Applications with treq and Klein
+    - [x] Chapter 3: Applications with treq and Klein
        - [Introducing `treq`](src/part_01/chapter_03/intro_treq.py)
        - [Introducing Klein](src/part_01/chapter_03/intro_klein.py)
        - [Klein and Deferreds](src/part_01/chapter_03/klein_and_deferreds.py)
