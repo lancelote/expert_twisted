@@ -29,4 +29,3 @@ class FeedAggregationServiceMaker(service.Service):
 
 
 makeFeedService = FeedAggregationServiceMaker()
-# ToDo: debug the permanent "Starting reactor..."
