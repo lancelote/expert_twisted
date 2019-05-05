@@ -41,8 +41,8 @@ Python" book by Mark Williams and contributors
        - [Feed Aggregation Project](src/part_01/chapter_03/feed_aggregation_project)
 - [ ] Part 2: Projects
     - [ ] [Chapter 4: Twisted in Docker](src/part_02/chapter_04)
-        - [ ] [Building Python from Scratch](src/part_02/chapter_04/building_python_from_scratch/Dockerfile)
-        - [ ] [Using Virtualenv inside Docker](src/part_02/chapter_04/using_virtualenv/Dockerfile)
+        - [x] [Building Python from Scratch](src/part_02/chapter_04/building_python_from_scratch/Dockerfile)
+        - [x] [Using Virtualenv inside Docker](src/part_02/chapter_04/using_virtualenv/Dockerfile)
     - [ ] Chapter 5: Using Twisted as a WSGI Server
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
