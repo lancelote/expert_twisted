@@ -5,8 +5,8 @@ Python" book by Mark Williams and contributors
 
 ## TOC
 
-- [x] [Part 1: Foundation](src/part_01/)
-    - [x] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01/)
+- [x] [Part 1: Foundation](src/part_01)
+    - [x] [Chapter 1: An Introduction to Event-Driven Programming with Twisted](src/part_01/chapter_01)
         - [Basic Event Driven Program](src/part_01/chapter_01/basic_event_driven_program.py)
         - [Program with Multiple Events](src/part_01/chapter_01/program_with_multiple_events.py)
         - [`select` and Sockets](src/part_01/chapter_01/select_and_sockets.py)
@@ -20,7 +20,7 @@ Python" book by Mark Williams and contributors
         - [Repeated Events with Looping Call](src/part_01/chapter_01/repeated_events_with_looping_call.py)
         - [Event Interfaces with `zope.interface`](src/part_01/chapter_01/event_interfaces_with_zope_interface.py)
         - [Flow Control with Producers and Consumers](src/part_01/chapter_01/flow_control_with_producers_and_consumers.py)
-    - [x] [Chapter 2: An Introduction to Asynchronous Programming with Twisted](src/part_01/chapter_02/)
+    - [x] [Chapter 2: An Introduction to Asynchronous Programming with Twisted](src/part_01/chapter_02)
         - [Introduction to Twisted Deferred](src/part_01/chapter_02/introduction_to_deferred.py)
         - [Errbacks and Failures](src/part_01/chapter_02/errbacks_and_failures.py)
         - [Composing Deferreds](src/part_01/chapter_02/composing_deferreds.py)
@@ -40,7 +40,8 @@ Python" book by Mark Williams and contributors
        - [First Feed Aggregation Draft](src/part_01/chapter_03/feed_aggregation_first_draft.py)
        - [Feed Aggregation Project](src/part_01/chapter_03/feed_aggregation_project)
 - [ ] Part 2: Projects
-    - [ ] Chapter 4: Twisted in Docker
+    - [ ] [Chapter 4: Twisted in Docker](src/part_02/chapter_04)
+        - [ ] [Building Python from Scratch](src/part_02/chapter_04/building_python_from_scratch/Dockerfile)
     - [ ] Chapter 5: Using Twisted as a WSGI Server
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
