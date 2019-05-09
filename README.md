@@ -46,6 +46,7 @@ Python" book by Mark Williams and contributors
         - [Using Pex inside Docker](src/part_02/chapter_04/using_pex/Dockerfile)
         - [Using NColony](src/part_02/chapter_04/using_ncolony/Dockerfile)
     - [ ] Chapter 5: Using Twisted as a WSGI Server
+        - [Raw WSGI Application](src/part_02/chapter_05/wsgi_hello.py)
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
     - [ ] Chapter 8: Push Data to Browsers and Micro-services with WebSocket
