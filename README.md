@@ -47,6 +47,7 @@ Python" book by Mark Williams and contributors
         - [Using NColony](src/part_02/chapter_04/using_ncolony/Dockerfile)
     - [ ] Chapter 5: Using Twisted as a WSGI Server
         - [Raw WSGI Application](src/part_02/chapter_05/wsgi_hello.py)
+        - [WSGI Reference Implementation](src/part_02/chapter_05/wsgi_reference_implementation.py)
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
     - [ ] Chapter 8: Push Data to Browsers and Micro-services with WebSocket
