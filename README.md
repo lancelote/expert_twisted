@@ -49,6 +49,7 @@ Python" book by Mark Williams and contributors
         - [Raw WSGI Application](src/part_02/chapter_05/wsgi_hello.py)
         - [WSGI Reference Implementation](src/part_02/chapter_05/wsgi_reference_implementation.py)
         - [`WebOb` Example](src/part_02/chapter_05/webob_example.py)
+        - [`Pyramid` Example](src/part_02/chapter_05/pyramid_example.py)
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
     - [ ] Chapter 8: Push Data to Browsers and Micro-services with WebSocket
