@@ -52,6 +52,7 @@ Python" book by Mark Williams and contributors
         - [`Pyramid` Example](src/part_02/chapter_05/pyramid_example.py)
         - [`Twisted` WSGI Plugin](src/part_02/chapter_05/twisted_wsgi_plugin/twisted/plugins/twisted_book_wsgi.py)
         - [WSGI Plugin for Subdomains](src/part_02/chapter_05/wsgi_plugin_subdomains.py)
+        - [WSGI Plugin for Pure Static](src/part_02/chapter_05/wsgi_plugin_pure_static.py)
     - [ ] Chapter 6: Tahoe-LAFS: The Least-Authority File System
     - [ ] Chapter 7: Magic Wormhole
     - [ ] Chapter 8: Push Data to Browsers and Micro-services with WebSocket
