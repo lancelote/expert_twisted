@@ -1,3 +1,5 @@
+**Status update**: on hold - not interested in further details at the moment.
+
 # expert_twisted
 
 Code from "[Expert Twisted][1]: Event-Driven and Asynchronous Programming with
